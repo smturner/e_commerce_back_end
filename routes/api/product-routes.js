@@ -33,6 +33,7 @@ router.get('/:id', async (req, res) => {
 
 // create new product
 router.post('/', (req, res) => {
+
   /* req.body should look like this...
     {
       product_name: "Basketball",
@@ -90,7 +91,7 @@ router.put('/:id', (req, res) => {
       // figure out which ones to remove
       const productTagsToRemove = productTags
         .filter(({ tag_id }) => !req.body.tagIds.includes(tag_id))
-        .map(({ id }) => id);
+        // .map(({ id }) => id);
 
       // run both actions
       return Promise.all([
