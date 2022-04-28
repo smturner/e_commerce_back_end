@@ -16,7 +16,15 @@ router.get('/', async(req, res) => {
   // be sure to include its associated Product data
 });
 
-router.get('/:id', (req, res) => {
+router.get('/:id', async(req, res) => {
+  try {
+    const tagsData = await Tag.findByPk(req.params.id, {
+      include: [{ model: Product}]
+    });
+    res.status(200).json(tagsData);
+  }catch (err) {
+    res.status(500).json(err);
+  }
   // find a single tag by its `id`
   // be sure to include its associated Product data
 });
