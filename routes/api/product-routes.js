@@ -13,8 +13,6 @@ router.get('/', async(req, res) => {
   }catch (err) {
     res.status(500).json(err);
   }
-  // find all products
-  // be sure to include its associated Category and Tag data
 });
 
 // get one product
@@ -27,13 +25,10 @@ router.get('/:id', async (req, res) => {
   }catch (err) {
     res.status(500).json(err);
   }
-  // find a single product by its `id`
-  // be sure to include its associated Category and Tag data
 });
 
 // create new product
 router.post('/', (req, res) => {
-
   /* req.body should look like this...
     {
       product_name: "Basketball",
@@ -91,7 +86,7 @@ router.put('/:id', (req, res) => {
       // figure out which ones to remove
       const productTagsToRemove = productTags
         .filter(({ tag_id }) => !req.body.tagIds.includes(tag_id))
-        // .map(({ id }) => id);
+        .map(({ id }) => id);
 
       // run both actions
       return Promise.all([
@@ -106,6 +101,7 @@ router.put('/:id', (req, res) => {
     });
 });
 
+// delete one product by its `id` value
 router.delete('/:id', async(req, res) => {
   try{
     const productData = await Product.destroy({
@@ -121,7 +117,6 @@ router.delete('/:id', async(req, res) => {
   }catch(err) {
     res.status(500).json(err);
   }
-  // delete one product by its `id` value
 });
 
 module.exports = router;
