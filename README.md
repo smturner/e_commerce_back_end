@@ -25,7 +25,7 @@ This applcliation is run using the server in corrilation with insomnia.
 <li>If done correctly you should be able to add, update, and delete a category, product and tag, as well as see all the information, or just one specific set of information by id.</li>
 </ul>
 
-View walk through video here-[Screencastify]()
+View walk through video here-[Screencastify](https://drive.google.com/file/d/1SaONHJKJMw53YbLghqRJoxdqg32yS0Xn/view)
 
 ## Links to Application
 <a href="https://github.com/smturner/e_commerce_back_end">GitHub Link</a>
