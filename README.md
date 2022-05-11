@@ -8,7 +8,7 @@ This is the back end of an e-comerce site that allows developers to see, add, up
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
-- [Links_to_Application] (#Links_to_Application)
+- [Links_to_Application](#Links_to_Application)
 - [Questions](#questions)
 - [License](#license)  
 
